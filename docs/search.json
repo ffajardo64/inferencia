@@ -46,7 +46,7 @@
     "href": "index.html",
     "title": "Introdução à Inferência Estatística",
     "section": "",
-    "text": "Prefácio\n\n\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n\nMostrar script\n1 + 1\n\n\n[1] 2"
+    "text": "Prefácio\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n\nMostrar script\n1 + 1\n\n\n[1] 2"
   },
   {
     "objectID": "matematica.html#somas-e-produtos",
