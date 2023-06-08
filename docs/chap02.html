@@ -1322,8 +1322,11 @@ Observação
 <p>Pela <a href="#def-fgm_conjunta">Definição&nbsp;<span>2.8</span></a>, sabemos que</p>
 <div class="math">
 <span class="math display">\[\begin{align*}
-  M_{\mathbf{X}}(\mathbf{t}) = \mathbb{E}\left[e^{\mathbf{t}^{\intercal}\mathbf{X}}\right]
-= \mathbb{E}[e^{t_1X+t_2Y}] \tag{$\dagger$}
+  M_{\mathbf{X}}(\mathbf{t}) &amp;= \mathbb{E}\left[e^{\mathbf{t}^{\intercal}\mathbf{X}}\right]
+  = \mathbb{E}[e^{t_1X_1+t_2X_2}] = \int_{0}^\infty \int_{0}^\infty  e^{t_1x_1+t_2x_2}e^{-(x_1+x_2)}\,dx_1dx_2 \\
+  &amp;= \int_{0}^\infty \int_{0}^\infty e^{(t_1-1)x_1}e^{(t_2-1)x_2}\,dx_1dx_2
+  = \int_{0}^\infty e^{(t_1-1)x_1}\,dx_1 \int_{0}^\infty e^{(t_2-1)x_2\,x_2}\,dx_2\\
+  &amp;= \frac{1}{(1-t_1)(1-t_2)}. \quad\checkmark
 \end{align*}\]</span>
 </div>
 </div>
