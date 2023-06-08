@@ -1308,7 +1308,7 @@ Observação
 <p>Calcule a FGMC da distribuição de <span class="math inline">\(\mathbf{X}=(X_1,X_2)\)</span>.</p>
 </div>
 <div class="callout-proof callout-note callout callout-style-default no-icon callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1317,7 +1317,7 @@ Observação
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-32" class="callout-32-contents callout-collapse collapse show">
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Pela <a href="#def-fgm_conjunta">Definição&nbsp;<span>2.8</span></a>, sabemos que</p>
 <div class="math">
@@ -1329,6 +1329,45 @@ Observação
   &amp;= \frac{1}{(1-t_1)(1-t_2)}. \quad\checkmark
 \end{align*}\]</span>
 </div>
+</div>
+</div>
+</div>
+<div id="exm-fgmc_chisq" class="theorem example">
+<p><span class="theorem-title"><strong>Exemplo 2.21 </strong></span>Seja <span class="math inline">\(X_1,X_2\)</span> uma amostra aleatória de uma população com distribuição normal padrão. Encontre as distribuições de <span class="math inline">\(2X_1X_2\)</span> e <span class="math inline">\(X_2^2-X_1^2\)</span>?</p>
+</div>
+<div class="callout-proof callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<em>Solução.</em>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sabemos que <span class="math inline">\(X_1\)</span> e <span class="math inline">\(X_2\)</span> são variáveis aleatórias independentes e identicamente distribuidas com distribuição <span class="math inline">\(N(0,1)\)</span>. Dessa forma, <span class="math inline">\(2X_1X_2\)</span> tem distribuição <span class="math inline">\(2\chi_{(1)}^2\)</span>, ou seja <span class="math inline">\(Gama\left(\frac12,\frac14\right)\)</span>.</p>
+<p>Seja <span class="math inline">\(U=2X_1X_2\)</span>, então</p>
+<div class="math">
+<span class="math display">\[\begin{align*}
+  \mathbb{E}\left[e^{tU}\right]&amp;=\mathbb{E}\left[e^{2tX_1X_2}\right]=
+      \frac{1}{2\pi}\int_{-\infty}^\infty\int_{-\infty}^\infty e^{2tx_1x_2}e^{-\frac12(x_1^2+x_2^2)}\,dx_1dx_2\\
+      &amp;=\frac{1}{2\pi}\int_{-\infty}^\infty e^{-\frac12x_2^2}\int_{-\infty}^\infty e^{-\frac12x_1^2}e^{2tx_1x_2}\,dx_1dx_2\\
+      &amp;=\frac{1}{2\pi}\int_{-\infty}^\infty \exp\left\{-\frac12x_2^2\right\}\exp\left\{2t^2x_2^2\right\}\int_{-\infty}^\infty \exp\left\{-\frac12\left(x_1-2tx_2\right)^2\right\}\,dx_1dx_2\\
+      &amp;=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \exp\left\{-\frac12\left(1-4t^2\right)x_ 2^2\right\}\,dx_2\\
+      &amp;=\left(1-4t^2\right)^{-\frac12}, \quad t^2&lt;\frac14 \text{ ou } |t|&lt;\frac12. \quad\checkmark
+\end{align*}\]</span>
+</div>
+<p>Seja <span class="math inline">\(t^*=t^2\)</span>, então <span class="math inline">\(\mathbb{E}\left[e^{t^*U}\right]=\left(1-4t^*\right)^{-\frac12}\)</span>, com <span class="math inline">\(t^*&lt;\frac{1}{4}\)</span>, i.e., a função geradora de momentos de uma <span class="math inline">\(Gama(\frac12,\frac14)\)</span>.</p>
+<p>Considere <span class="math inline">\(V=X_2^2-X_1^2\)</span>, então</p>
+<div class="math">
+<span class="math display">\[\begin{align*}
+      \mathbb{E}\left[e^{tV}\right]&amp;=\mathbb{E}\left[e^{t\left(X_2^2-X_1^2\right)}\right]=\mathbb{E}\left[e^{tX_2^2}\right]\mathbb{E}\left[e^{- tX_1^2}\right]=\left(1-2t\right)^{-\frac12}\left(1+2t\right)^{-\frac12}\\
+      &amp;=\left[\left(1-2t\right)\left(1+2t\right)\right]^{-\frac12}=\left(1-4t^2\right)^{-\frac12}, \quad t^2&lt;\frac14 \text{ ou } |t|&lt;\frac12.
+\end{align*}\]</span>
+</div>
+<p>Isso significa que <span class="math inline">\(U\)</span> e <span class="math inline">\(V\)</span> seguem a mesma distribuição <span class="math inline">\(2\chi_{(1)}^2\)</span> ou <span class="math inline">\(gama(\frac12,\frac14)\quad\checkmark\)</span>.</p>
 </div>
 </div>
 </div>
