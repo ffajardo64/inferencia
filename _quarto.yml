@@ -7,7 +7,7 @@ lang: pt-BR
 
 book:
   title: "Introdução à Inferência Estatística"
-  subtitle: "com Aplicações no R"
+  subtitle: "Exemplos e aplicações no R"
   author: 
     - name: "Fabio A. Fajardo Molinares"
       orcid: "0000-0002-4952-3975"
@@ -22,12 +22,12 @@ book:
   reader-mode: true # Se 'true', oculta a barra lateral e o sumário
   
   page-footer: 
-    left: "Introdução à inferência Estatística com aplicações no R" # Rodapé esquerdo
+    left: "Introdução à inferência Estatística: Exemplos e aplicações no R" # Rodapé esquerdo
     right: "© 2023 Fabio A. Fajardo M." # Rodapé direito
     
   chapters:
   - index.qmd
-  - preface.qmd
+  - intro.qmd
   - part: "Amostragem e distribuições amostrais"
     chapters: 
       - chap01.qmd
